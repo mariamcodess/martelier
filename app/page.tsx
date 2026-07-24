@@ -5,26 +5,31 @@ import { FormEvent, useEffect, useState } from "react";
 const services = [
   {
     number: "01",
-    title: "Event design",
-    text: "A cohesive visual world shaped around your celebration—from the first concept to the final detail.",
+    title: "Event design & décor",
+    text: "A complete décor concept for your celebration, including the color story, layout, key moments, materials, and finishing details.",
   },
   {
     number: "02",
-    title: "Statement backdrops",
-    text: "Sculptural focal moments designed for ceremonies, portraits, entrances, and unforgettable reveals.",
+    title: "Backdrops & installations",
+    text: "Custom focal points for ceremonies, sweetheart tables, entrances, photo moments, and milestone celebrations.",
   },
   {
     number: "03",
-    title: "Tablescapes",
-    text: "Layered linens, florals, candlelight, place settings, and finishing details composed as one.",
+    title: "Tablescapes & styling",
+    text: "Linens, candlelight, place settings, florals, and decorative details styled into an inviting guest experience.",
+  },
+  {
+    number: "04",
+    title: "Custom details & signage",
+    text: "Welcome signs, seating displays, menus, place cards, and personalized details designed to complete the look.",
   },
 ];
 
 const steps = [
-  ["01", "Inquire", "Tell us what you’re celebrating, where, and how you want it to feel."],
-  ["02", "Discover", "We meet, listen, and define the atmosphere, priorities, and investment."],
-  ["03", "Compose", "Your custom concept takes shape through materials, color, form, and detail."],
-  ["04", "Transform", "We install, style, and refine the setting so you can simply arrive."],
+  ["01", "Inquire", "Share your date, venue, guest count, décor needs, and the feeling you want for your day."],
+  ["02", "Consult", "We talk through your vision, priorities, inspiration, and anticipated décor investment."],
+  ["03", "Design", "We create a custom décor direction with a cohesive palette, materials, and statement moments."],
+  ["04", "Celebrate", "Our team installs and styles every detail, then returns for breakdown after your event."],
 ];
 
 export default function Home() {
@@ -84,26 +89,26 @@ export default function Home() {
           <span className="image-index">No. 01 — The opening scene</span>
         </div>
         <p className="hero-copy reveal">
-          Martelier creates artfully composed environments for weddings,
-          milestone celebrations, and intimate gatherings.
+          Luxury event décor for weddings and milestone celebrations,
+          thoughtfully designed for life’s most meaningful moments.
         </p>
         <div className="hero-footer">
-          <span>New York · Beyond</span>
-          <span>Event design&nbsp;&nbsp;•&nbsp;&nbsp;Backdrops&nbsp;&nbsp;•&nbsp;&nbsp;Tablescapes</span>
+          <span>Dallas · DMV · Beyond</span>
+          <span>Event décor&nbsp;&nbsp;•&nbsp;&nbsp;Backdrops&nbsp;&nbsp;•&nbsp;&nbsp;Tablescapes</span>
         </div>
       </section>
 
       <section className="intro section-pad">
-        <p className="section-label">The Martelier perspective</p>
+        <p className="section-label">Your celebration, elevated</p>
         <div className="intro-grid">
-          <h2>Not simply decorated.<br /><em>Entirely considered.</em></h2>
+          <h2>Your vision,<br /><em>beautifully brought to life.</em></h2>
           <div>
             <p>
-              We approach every occasion as a composition—balancing color,
-              texture, scale, and light to create an experience that feels
-              unmistakably yours.
+              From your ceremony backdrop to the final place setting, we create
+              polished, personalized décor that makes your special day feel
+              cohesive, luxurious, and completely your own.
             </p>
-            <button className="text-link" onClick={openInquiry}>Tell us what you’re imagining <span>↗</span></button>
+            <button className="text-link" onClick={openInquiry}>Tell us about your event <span>↗</span></button>
           </div>
         </div>
       </section>
@@ -111,7 +116,7 @@ export default function Home() {
       <section className="services section-pad" id="services">
         <div className="section-heading">
           <p className="section-label">Our services</p>
-          <p className="section-note">Selected individually or composed together</p>
+          <p className="section-note">Custom proposals based on your celebration</p>
         </div>
         <div className="service-list">
           {services.map((service) => (
@@ -125,17 +130,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="manifesto">
-        <div className="manifesto-arch">
-          <span>Considered down to the last detail</span>
-          <h2>We set the scene.<br /><em>You live the moment.</em></h2>
+      <section className="image-story">
+        <div className="backdrop-image" role="img" aria-label="Luxury ivory and oxblood ceremony backdrop" />
+        <div className="story-copy">
+          <p className="section-label">Décor that feels like you</p>
+          <h2>Beautiful from every angle.<br /><em>Meaningful in every detail.</em></h2>
+          <p>
+            We transform venues into welcoming, elevated settings that reflect
+            your style and make the people you love feel part of something special.
+          </p>
         </div>
+        <div className="tablescape-image" role="img" aria-label="Luxury oxblood and ivory wedding tablescape" />
       </section>
 
       <section className="approach section-pad" id="approach">
         <div className="section-heading">
           <p className="section-label">How it unfolds</p>
-          <p className="section-note">A thoughtful process, from first idea to final reveal</p>
+          <p className="section-note">Clear guidance from your first idea through event day</p>
         </div>
         <div className="steps">
           {steps.map(([number, title, text]) => (
@@ -152,19 +163,19 @@ export default function Home() {
         <div className="about-mark">M</div>
         <div className="about-copy">
           <p className="section-label">Meet the founder</p>
-          <h2>A designer’s eye,<br /><em>turned toward celebration.</em></h2>
+          <h2>Design experience,<br /><em>devoted to your special day.</em></h2>
           <p>
             Founded by Mar, Martelier brings a background in graphic and
-            experience design to the world of events. Every environment begins
-            with a story, then takes form through proportion, texture, rhythm,
-            and feeling.
+            experience design to luxury event décor. That trained eye shapes
+            everything—from the overall atmosphere to the smallest custom
+            detail—so your celebration feels polished, personal, and memorable.
           </p>
         </div>
       </section>
 
       <section className="closing section-pad">
-        <p className="section-label">Now accepting select celebrations</p>
-        <h2>Let’s create the<br /><em>atmosphere.</em></h2>
+        <p className="section-label">Weddings · Milestones · Intimate celebrations</p>
+        <h2>Let’s make your day<br /><em>feel extraordinary.</em></h2>
         <button className="primary-button" onClick={openInquiry}>Start an inquiry <span>↗</span></button>
       </section>
 

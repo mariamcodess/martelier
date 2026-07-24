@@ -91,7 +91,7 @@ a { text-decoration: none; }
 }
 .hero-kicker {
   grid-column: 1 / -1;
-  margin-left: 4vw;
+  margin-left: 0;
   color: var(--oxblood);
 }
 .hero-kicker::before { content: ""; display: inline-block; width: 32px; height: 1px; background: var(--brass); margin: 0 16px 3px 0; }
@@ -224,29 +224,53 @@ em { color: var(--oxblood); font-weight: 400; }
 .service-row p { margin: 0; font: 15px/1.55 var(--serif); }
 .service-arrow { justify-self: end; }
 
-.manifesto {
-  min-height: 780px;
-  display: grid;
-  place-items: center;
+.image-story {
+  position: relative;
+  min-height: 980px;
+  padding: 110px 6vw;
+  overflow: hidden;
   background: var(--oxblood);
   color: var(--bone);
-  padding: 90px 6vw 0;
-  overflow: hidden;
 }
-.manifesto-arch {
-  width: min(900px, 90vw);
-  height: 690px;
-  border: 1px solid rgba(242,237,228,.45);
-  border-radius: 450px 450px 0 0;
-  display: grid;
-  align-content: center;
-  justify-items: center;
-  text-align: center;
-  background: radial-gradient(circle at 50% 55%, rgba(185,141,137,.25), transparent 42%);
+.backdrop-image {
+  width: 72%;
+  height: 610px;
+  margin-left: auto;
+  background: linear-gradient(rgba(88,28,37,.05), rgba(33,26,23,.08)), url("/martelier-backdrop.png") center/cover;
+  box-shadow: 0 30px 80px rgba(20,10,10,.22);
 }
-.manifesto-arch span { font-size: 9px; text-transform: uppercase; letter-spacing: .22em; }
-.manifesto-arch h2 { margin: 32px 0 0; font: 400 clamp(48px, 7vw, 105px)/.95 var(--serif); letter-spacing: -.05em; }
-.manifesto-arch em { color: var(--rose); }
+.story-copy {
+  position: relative;
+  z-index: 2;
+  width: min(730px, 62vw);
+  margin: -110px 0 0;
+  padding: 55px 60px 30px 0;
+  background: var(--oxblood);
+}
+.story-copy .section-label { color: var(--rose); }
+.story-copy h2 {
+  margin: 28px 0;
+  font: 400 clamp(48px, 5.8vw, 90px)/.96 var(--serif);
+  letter-spacing: -.045em;
+}
+.story-copy h2 em { color: var(--rose); }
+.story-copy > p:last-child {
+  width: min(430px, 100%);
+  margin: 0;
+  font: 17px/1.6 var(--serif);
+  color: rgba(242,237,228,.82);
+}
+.tablescape-image {
+  position: absolute;
+  right: 7vw;
+  bottom: 55px;
+  z-index: 3;
+  width: 260px;
+  height: 350px;
+  border: 10px solid var(--bone);
+  background: url("/martelier-tablescape.png") center/cover;
+  box-shadow: 0 25px 65px rgba(20,10,10,.28);
+}
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
 .step { padding: 25px 28px 15px 0; border-right: 1px solid var(--line); min-height: 260px; }
 .step + .step { padding-left: 28px; }
@@ -401,8 +425,11 @@ footer button { border: 0; background: none; padding: 0; }
   .section-note { margin-top: 12px; }
   .service-row { grid-template-columns: 35px 1fr 20px; gap: 15px; }
   .service-row p { grid-column: 2 / -1; }
-  .manifesto { min-height: 620px; padding: 70px 20px 0; }
-  .manifesto-arch { height: 550px; }
+  .image-story { min-height: 940px; padding: 70px 22px; }
+  .backdrop-image { width: 92%; height: 470px; }
+  .story-copy { width: 90%; margin-top: -55px; padding: 35px 30px 25px 0; }
+  .story-copy h2 { font-size: clamp(45px, 11vw, 70px); }
+  .tablescape-image { right: 22px; bottom: 45px; width: 210px; height: 285px; }
   .steps { grid-template-columns: 1fr 1fr; }
   .step:nth-child(2) { border-right: 0; }
   .step:nth-child(n+3) { border-top: 1px solid var(--line); }
@@ -417,6 +444,10 @@ footer button { border: 0; background: none; padding: 0; }
   .hero-art { top: 290px; right: -15vw; width: 66vw; height: 400px; }
   .hero-copy { width: 53vw; bottom: 82px; }
   .service-row h3 { font-size: 34px; }
+  .image-story { min-height: 850px; }
+  .backdrop-image { width: 100%; height: 330px; }
+  .story-copy { width: 100%; margin-top: -20px; }
+  .tablescape-image { width: 155px; height: 215px; }
   .steps { grid-template-columns: 1fr; }
   .step, .step + .step { border-right: 0; border-top: 1px solid var(--line); padding-left: 0; min-height: 220px; }
   .step h3 { margin-top: 45px; }
