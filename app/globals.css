@@ -207,6 +207,7 @@ em { color: var(--oxblood); font-weight: 400; }
 }
 .text-link span { margin-left: 28px; }
 .section-heading { display: flex; justify-content: space-between; margin-bottom: 50px; }
+.services .section-heading p { font-size: 11px; }
 .section-note { color: rgba(33,26,23,.55); }
 .service-list { border-top: 1px solid var(--line); }
 .service-row {
@@ -220,7 +221,7 @@ em { color: var(--oxblood); font-weight: 400; }
 }
 .service-row:hover { color: var(--oxblood); padding-left: 16px; padding-right: 16px; background: rgba(255,255,255,.25); }
 .service-row > span:first-child, .service-arrow { font-size: 10px; letter-spacing: .15em; }
-.service-row h3 { margin: 0; font: 400 clamp(35px, 4vw, 63px)/1 var(--serif); }
+.service-row h3 { margin: 0; font: 400 clamp(32px, 3.35vw, 53px)/1.02 var(--serif); }
 .service-row p { margin: 0; font: 15px/1.55 var(--serif); }
 .service-arrow { justify-self: end; }
 
@@ -443,7 +444,7 @@ footer button { border: 0; background: none; padding: 0; }
   .hero-title { top: 195px; font-size: 53px; }
   .hero-art { top: 290px; right: -15vw; width: 66vw; height: 400px; }
   .hero-copy { width: 53vw; bottom: 82px; }
-  .service-row h3 { font-size: 34px; }
+  .service-row h3 { font-size: 31px; }
   .image-story { min-height: 850px; }
   .backdrop-image { width: 100%; height: 330px; }
   .story-copy { width: 100%; margin-top: -20px; }
