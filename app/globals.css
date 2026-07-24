@@ -358,7 +358,7 @@ footer {
 }
 footer p, footer span, footer a, footer button { font-size: 9px; text-transform: uppercase; letter-spacing: .15em; }
 footer p { margin: 0; }
-footer .wordmark { font-size: 22px; }
+footer .wordmark { font-size: 22px; transform: translateY(-8px); }
 footer > * { justify-self: center; }
 footer div { display: flex; justify-content: center; gap: 25px; }
 footer button { border: 0; background: none; padding: 0; }
@@ -500,6 +500,7 @@ footer button { border: 0; background: none; padding: 0; }
   .field-row { grid-template-columns: 1fr; }
   .contact-list > * { grid-template-columns: 65px 1fr 14px; gap: 12px; }
   .contact-list strong { font-size: 16px; }
+  footer .wordmark { transform: none; }
   .inquiry-panel {
     width: 100vw;
     padding: 58px 22px;
