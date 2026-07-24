@@ -84,7 +84,7 @@ export default function Home() {
           <span className="reveal">Where occasions</span>
           <span className="hero-title-italic reveal">become atmosphere.</span>
         </h1>
-        <div className="hero-art" aria-label="Editorial tablescape in oxblood, ivory, and brass">
+        <div className="hero-art" aria-label="Sculptural ivory, oxblood, and brass event backdrop">
           <div className="hero-image" />
           <span className="image-index">No. 01 — The opening scene</span>
         </div>
@@ -131,7 +131,7 @@ export default function Home() {
       </section>
 
       <section className="image-story">
-        <div className="backdrop-image" role="img" aria-label="Luxury ivory and oxblood ceremony backdrop" />
+        <div className="backdrop-image" role="img" aria-label="Extravagant fully draped wedding reception with wrapped dance floor and mixed tables" />
         <div className="story-copy">
           <p className="section-label">Décor that feels like you</p>
           <h2>Beautiful from every angle.<br /><em>Meaningful in every detail.</em></h2>

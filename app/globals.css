@@ -133,7 +133,7 @@ a { text-decoration: none; }
 .hero-image {
   width: 100%;
   height: calc(100% - 30px);
-  background: linear-gradient(rgba(242,237,228,.02), rgba(166,129,87,.03)), url("/martelier-editorial-hero-v2.png") center/cover;
+  background: linear-gradient(rgba(242,237,228,.02), rgba(166,129,87,.03)), url("/martelier-backdrop.png") center/cover;
   border-radius: 50% 50% 0 0;
   filter: saturate(.9) contrast(.98);
   box-shadow: 0 24px 70px rgba(33,26,23,.1);
@@ -236,7 +236,7 @@ em { color: var(--oxblood); font-weight: 400; }
   width: 72%;
   height: 610px;
   margin-left: auto;
-  background: linear-gradient(rgba(88,28,37,.05), rgba(33,26,23,.08)), url("/martelier-backdrop.png") center/cover;
+  background: linear-gradient(rgba(88,28,37,.04), rgba(33,26,23,.09)), url("/martelier-full-wedding-elevated.png") center/cover;
   box-shadow: 0 30px 80px rgba(20,10,10,.22);
 }
 .story-copy {
