@@ -86,7 +86,6 @@ export default function Home() {
         </h1>
         <div className="hero-art" aria-label="Sculptural ivory, oxblood, and brass event backdrop">
           <div className="hero-image" />
-          <span className="image-index">No. 01 — The opening scene</span>
         </div>
         <p className="hero-copy reveal">
           Luxury event décor for weddings and milestone celebrations,
@@ -124,6 +123,20 @@ export default function Home() {
             We transform venues into welcoming, elevated settings that reflect
             your style and make the people you love feel part of something special.
           </p>
+        </div>
+        <div className="detail-gallery" aria-label="Event décor details">
+          <figure>
+            <div className="detail-image welcome-sign" role="img" aria-label="Sculptural wedding welcome sign with florals and candlelight" />
+            <figcaption>Welcome signage</figcaption>
+          </figure>
+          <figure>
+            <div className="detail-image tablescape-detail" role="img" aria-label="Oxblood, ivory, and brass wedding tablescape" />
+            <figcaption>Tablescape styling</figcaption>
+          </figure>
+          <figure>
+            <div className="detail-image custom-detail" role="img" aria-label="Custom wedding menu, place card, florals, and place setting" />
+            <figcaption>Custom details</figcaption>
+          </figure>
         </div>
       </section>
 

@@ -83,7 +83,7 @@ a { text-decoration: none; }
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr auto;
 }
-.hero-kicker, .section-label, .section-note, .image-index, .hero-footer {
+.hero-kicker, .section-label, .section-note, .hero-footer {
   font-size: 9px;
   line-height: 1.4;
   text-transform: uppercase;
@@ -119,12 +119,12 @@ a { text-decoration: none; }
   z-index: 1;
   width: min(36vw, 560px);
   height: 68vh;
-  top: 14vh;
+  top: 16vh;
   right: 3.5vw;
 }
 .hero-image {
   width: 100%;
-  height: calc(100% - 30px);
+  height: 100%;
   background: linear-gradient(rgba(242,237,228,.02), rgba(166,129,87,.03)), url("/martelier-backdrop.png") 52% center/cover;
   border-radius: 48% 48% 3px 3px;
   filter: saturate(.9) contrast(.98);
@@ -133,15 +133,6 @@ a { text-decoration: none; }
   overflow: hidden;
 }
 .hero-art:hover .hero-image { transform: scale(1.015); filter: saturate(1) contrast(1); }
-.image-index {
-  display: block;
-  margin-top: 12px;
-  color: var(--brass);
-  font-family: var(--serif);
-  font-style: italic;
-  text-transform: none;
-  letter-spacing: .05em;
-}
 .hero-copy {
   position: absolute;
   z-index: 4;
@@ -209,7 +200,9 @@ em { color: var(--oxblood); font-weight: 400; }
   position: relative;
   display: grid;
   grid-template-columns: minmax(380px, .72fr) minmax(0, 1.28fr);
-  grid-template-areas: "copy image";
+  grid-template-areas:
+    "copy image"
+    "gallery gallery";
   gap: 6vw;
   align-items: center;
   padding: 90px 6vw;
@@ -243,6 +236,30 @@ em { color: var(--oxblood); font-weight: 400; }
   margin: 0;
   font: 17px/1.6 var(--serif);
   color: rgba(242,237,228,.82);
+}
+.detail-gallery {
+  grid-area: gallery;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 20px;
+  margin-top: 12px;
+}
+.detail-gallery figure { margin: 0; }
+.detail-image {
+  width: 100%;
+  height: 360px;
+  background-position: center;
+  background-size: cover;
+}
+.welcome-sign { background-image: url("/martelier-welcome-sign.png"); }
+.tablescape-detail { background-image: url("/martelier-tablescape.png"); }
+.custom-detail { background-image: url("/martelier-custom-place-setting.png"); }
+.detail-gallery figcaption {
+  margin-top: 12px;
+  color: var(--rose);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: .18em;
 }
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
 .step { padding: 25px 28px 15px 0; border-right: 1px solid var(--line); min-height: 260px; }
@@ -289,9 +306,10 @@ em { color: var(--oxblood); font-weight: 400; }
 .primary-button span { margin-left: 40px; }
 footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr auto;
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  align-items: end;
+  align-items: center;
+  text-align: center;
   padding: 60px 3.5vw 35px;
   background: var(--espresso);
   color: var(--bone);
@@ -299,7 +317,8 @@ footer {
 footer p, footer span, footer a, footer button { font-size: 9px; text-transform: uppercase; letter-spacing: .15em; }
 footer p { margin: 0; }
 footer .wordmark { font-size: 22px; }
-footer div { display: flex; gap: 25px; }
+footer > * { justify-self: center; }
+footer div { display: flex; justify-content: center; gap: 25px; }
 footer button { border: 0; background: none; padding: 0; }
 
 .inquiry-overlay {
@@ -406,13 +425,15 @@ footer button { border: 0; background: none; padding: 0; }
   .service-row p { grid-column: 2 / -1; }
   .image-story {
     grid-template-columns: 1fr;
-    grid-template-areas: "image" "copy";
+    grid-template-areas: "image" "copy" "gallery";
     gap: 45px;
     padding: 70px 22px;
   }
   .backdrop-image { width: 100%; height: 470px; }
   .story-copy { width: 100%; margin: 0; padding: 0; }
   .story-copy h2 { font-size: clamp(45px, 11vw, 70px); }
+  .detail-gallery { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .detail-image { height: 260px; }
   .steps { grid-template-columns: 1fr 1fr; }
   .step:nth-child(2) { border-right: 0; }
   .step:nth-child(n+3) { border-top: 1px solid var(--line); }
@@ -428,6 +449,8 @@ footer button { border: 0; background: none; padding: 0; }
   .hero-copy { width: 53vw; bottom: 82px; }
   .service-row h3 { font-size: 31px; }
   .backdrop-image { width: 100%; height: 330px; }
+  .detail-gallery { grid-template-columns: 1fr; gap: 28px; }
+  .detail-image { height: 380px; }
   .steps { grid-template-columns: 1fr; }
   .step, .step + .step { border-right: 0; border-top: 1px solid var(--line); padding-left: 0; min-height: 220px; }
   .step h3 { margin-top: 45px; }
