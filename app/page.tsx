@@ -98,21 +98,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="intro section-pad">
-        <p className="section-label">Your celebration, elevated</p>
-        <div className="intro-grid">
-          <h2>Your vision,<br /><em>beautifully brought to life.</em></h2>
-          <div>
-            <p>
-              From your ceremony backdrop to the final place setting, we create
-              polished, personalized décor that makes your special day feel
-              cohesive, luxurious, and completely your own.
-            </p>
-            <button className="text-link" onClick={openInquiry}>Tell us about your event <span>↗</span></button>
-          </div>
-        </div>
-      </section>
-
       <section className="services section-pad" id="services">
         <div className="section-heading">
           <p className="section-label">Our services</p>
