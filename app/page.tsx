@@ -241,6 +241,10 @@ export default function Home() {
                   </label>
                   <label>Event date (optional)<input type="date" name="date" /></label>
                 </div>
+                <div className="field-row">
+                  <label>Event location<input name="location" placeholder="City, State" required /></label>
+                  <label>Venue (optional)<input name="venue" placeholder="Venue name, if known" /></label>
+                </div>
                 <label>Estimated décor investment (optional)
                   <select name="budget" defaultValue="">
                     <option value="" disabled>Select a range</option>
