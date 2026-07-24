@@ -176,13 +176,36 @@ export default function Home() {
         <button className="primary-button" onClick={openInquiry}>Start an inquiry <span>↗</span></button>
       </section>
 
+      <section className="contact section-pad" id="contact">
+        <div className="contact-intro">
+          <p className="section-label">Contact Martelier</p>
+          <h2>Let’s stay<br /><em>connected.</em></h2>
+        </div>
+        <div className="contact-list">
+          <a href="mailto:martelier.co@gmail.com">
+            <span>Email</span>
+            <strong>martelier.co@gmail.com</strong>
+            <b>↗</b>
+          </a>
+          <div>
+            <span>Phone</span>
+            <strong>Work number coming soon</strong>
+          </div>
+          <a href="https://www.instagram.com/martelier/" target="_blank" rel="noreferrer">
+            <span>Instagram</span>
+            <strong>@martelier</strong>
+            <b>↗</b>
+          </a>
+        </div>
+      </section>
+
       <footer>
         <a className="wordmark" href="#top">Martelier</a>
         <p>Luxury event design &amp; décor</p>
         <div>
           <a href="#services">Services</a>
           <a href="#about">About</a>
-          <button onClick={openInquiry}>Inquire</button>
+          <a href="#contact">Contact</a>
         </div>
         <span>© 2026 Martelier</span>
       </footer>
