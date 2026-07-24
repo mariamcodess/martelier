@@ -82,15 +82,16 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-kicker reveal">Luxury event design &amp; décor</div>
         <h1 className="hero-title">
-          <span className="reveal">Where occasions</span>
-          <span className="hero-title-italic reveal">become atmosphere.</span>
+          <span className="reveal">Your vision,</span>
+          <span className="hero-title-italic reveal">beautifully brought to life.</span>
         </h1>
         <div className="hero-art" aria-label="Sculptural ivory, oxblood, and brass event backdrop">
           <div className="hero-image" />
         </div>
         <p className="hero-copy reveal">
-          Luxury event décor for weddings and milestone celebrations,
-          thoughtfully designed for life’s most meaningful moments.
+          Thoughtfully designed event décor for weddings and milestone
+          celebrations—created to make your day feel polished, personal,
+          and entirely your own.
         </p>
         <div className="hero-footer">
           <span>Dallas · DMV · Beyond</span>
