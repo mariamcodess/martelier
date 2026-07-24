@@ -131,15 +131,16 @@ export default function Home() {
       </section>
 
       <section className="image-story">
-        <div className="backdrop-image" role="img" aria-label="Luxury ivory and oxblood ceremony backdrop" />
+        <div className="full-wedding-image" role="img" aria-label="Complete luxury wedding reception with draping, tablescapes, and a sweetheart backdrop" />
         <div className="story-copy">
-          <p className="section-label">Décor that feels like you</p>
-          <h2>Beautiful from every angle.<br /><em>Meaningful in every detail.</em></h2>
+          <p className="section-label">The complete celebration</p>
+          <h2>From the full room<br /><em>to the final detail.</em></h2>
           <p>
-            We transform venues into welcoming, elevated settings that reflect
-            your style and make the people you love feel part of something special.
+            Draping, backdrops, tablescapes, signage, and finishing touches come
+            together as one polished experience for you and your guests.
           </p>
         </div>
+        <div className="installation-image" role="img" aria-label="Custom ivory and oxblood wedding backdrop installation" />
         <div className="tablescape-image" role="img" aria-label="Luxury oxblood and ivory wedding tablescape" />
       </section>
 
