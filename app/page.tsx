@@ -213,27 +213,38 @@ export default function Home() {
             <>
               <p className="section-label">Start an inquiry</p>
               <h2 id="inquiry-title">Tell us about<br /><em>the occasion.</em></h2>
+              <p className="inquiry-note">
+                You don’t need to have every detail figured out just yet. Share
+                what you know and what you’re dreaming of—we’ll help shape the rest.
+              </p>
               <form onSubmit={handleSubmit}>
                 <div className="field-row">
-                  <label>First name<input name="firstName" required /></label>
-                  <label>Last name<input name="lastName" required /></label>
+                  <label>Full name<input name="name" autoComplete="name" required /></label>
+                  <label>Phone number<input type="tel" name="phone" autoComplete="tel" required /></label>
                 </div>
-                <label>Email address<input type="email" name="email" required /></label>
+                <label>Email address<input type="email" name="email" autoComplete="email" required /></label>
                 <div className="field-row">
                   <label>Event type
                     <select name="eventType" required defaultValue="">
                       <option value="" disabled>Select one</option>
+                      <option>Wedding (Nikkah)</option>
                       <option>Wedding</option>
-                      <option>Milestone celebration</option>
-                      <option>Intimate gathering</option>
+                      <option>Birthday celebration</option>
+                      <option>Bridal shower</option>
                       <option>Brand event</option>
-                      <option>Other</option>
+                      <option>Proposal</option>
+                      <option>Engagement celebration</option>
+                      <option>Anniversary</option>
+                      <option>Baby shower</option>
+                      <option>Corporate gala</option>
+                      <option>Private dinner or soirée</option>
+                      <option>Other celebration</option>
                     </select>
                   </label>
-                  <label>Event date<input type="date" name="date" /></label>
+                  <label>Event date (optional)<input type="date" name="date" /></label>
                 </div>
-                <label>Estimated décor investment
-                  <select name="budget" required defaultValue="">
+                <label>Estimated décor investment (optional)
+                  <select name="budget" defaultValue="">
                     <option value="" disabled>Select a range</option>
                     <option>$3,000–$5,000</option>
                     <option>$5,000–$10,000</option>

@@ -341,7 +341,13 @@ footer button { border: 0; background: none; padding: 0; }
   background: none;
   font: 32px/1 var(--serif);
 }
-.inquiry-panel h2 { font-size: clamp(50px, 6vw, 80px); margin: 24px 0 45px; }
+.inquiry-panel h2 { font-size: clamp(50px, 6vw, 80px); margin: 24px 0 20px; }
+.inquiry-note {
+  max-width: 500px;
+  margin: 0 0 38px;
+  color: rgba(33,26,23,.7);
+  font: italic 16px/1.55 var(--serif);
+}
 .inquiry-panel form { display: grid; gap: 28px; }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
 .inquiry-panel label {
