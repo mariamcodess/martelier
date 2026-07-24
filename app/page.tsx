@@ -212,18 +212,18 @@ export default function Home() {
                   <label>Event type
                     <select name="eventType" required defaultValue="">
                       <option value="" disabled>Select one</option>
-                      <option>Wedding (Nikkah)</option>
-                      <option>Wedding</option>
-                      <option>Birthday celebration</option>
-                      <option>Bridal shower</option>
-                      <option>Brand event</option>
-                      <option>Proposal</option>
-                      <option>Engagement celebration</option>
                       <option>Anniversary</option>
                       <option>Baby shower</option>
+                      <option>Birthday celebration</option>
+                      <option>Brand event</option>
+                      <option>Bridal shower</option>
                       <option>Corporate gala</option>
-                      <option>Private dinner or soirée</option>
+                      <option>Engagement celebration</option>
                       <option>Other celebration</option>
+                      <option>Private dinner or soirée</option>
+                      <option>Proposal</option>
+                      <option>Wedding</option>
+                      <option>Wedding (Nikkah)</option>
                     </select>
                   </label>
                   <label>Event date (optional)<input type="date" name="date" /></label>
