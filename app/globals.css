@@ -125,7 +125,7 @@ a { text-decoration: none; }
 .hero-image {
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(242,237,228,.02), rgba(166,129,87,.03)), url("/martelier-backdrop.png") 52% center/cover;
+  background: linear-gradient(rgba(242,237,228,.02), rgba(166,129,87,.03)), url("/martelier-backdrop.jpg") 52% center/cover;
   border-radius: 48% 48% 3px 3px;
   filter: saturate(.9) contrast(.98);
   box-shadow: 0 24px 70px rgba(33,26,23,.1);
@@ -214,7 +214,7 @@ em { color: var(--oxblood); font-weight: 400; }
   grid-area: image;
   width: 100%;
   height: 600px;
-  background: linear-gradient(rgba(88,28,37,.04), rgba(33,26,23,.09)), url("/martelier-full-wedding-elevated.png") center/cover;
+  background: linear-gradient(rgba(88,28,37,.04), rgba(33,26,23,.09)), url("/martelier-full-wedding-elevated.jpg") center/cover;
   box-shadow: 0 30px 80px rgba(20,10,10,.22);
 }
 .story-copy {
@@ -251,9 +251,9 @@ em { color: var(--oxblood); font-weight: 400; }
   background-position: center;
   background-size: cover;
 }
-.welcome-sign { background-image: url("/martelier-welcome-sign.png"); }
-.tablescape-detail { background-image: url("/martelier-tablescape.png"); }
-.custom-detail { background-image: url("/martelier-custom-place-setting.png"); }
+.welcome-sign { background-image: url("/martelier-welcome-sign.jpg"); }
+.tablescape-detail { background-image: url("/martelier-tablescape.jpg"); }
+.custom-detail { background-image: url("/martelier-custom-place-setting.jpg"); }
 .detail-gallery figcaption {
   margin-top: 12px;
   color: var(--rose);
@@ -455,6 +455,14 @@ footer button { border: 0; background: none; padding: 0; }
   .step, .step + .step { border-right: 0; border-top: 1px solid var(--line); padding-left: 0; min-height: 220px; }
   .step h3 { margin-top: 45px; }
   .field-row { grid-template-columns: 1fr; }
+  .inquiry-panel {
+    width: 100vw;
+    padding: 58px 22px;
+    overflow-x: hidden;
+  }
+  .inquiry-panel h2 { font-size: 48px; }
+  .inquiry-note { font-size: 15px; line-height: 1.5; margin-bottom: 32px; }
+  .close-button { top: 16px; right: 17px; }
   footer { grid-template-columns: 1fr; align-items: start; }
 }
 
