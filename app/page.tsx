@@ -180,6 +180,11 @@ export default function Home() {
         <div className="contact-intro">
           <p className="section-label">Contact Martelier</p>
           <h2>Let’s stay<br /><em>connected.</em></h2>
+          <p className="contact-note">
+            Have a question, a budding idea, or simply not sure where to begin?
+            Reach out in whichever way feels easiest—we’d love to hear what
+            you’re dreaming up.
+          </p>
         </div>
         <div className="contact-list">
           <a href="mailto:martelier.co@gmail.com">

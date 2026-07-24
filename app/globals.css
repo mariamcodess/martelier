@@ -317,6 +317,12 @@ em { color: var(--oxblood); font-weight: 400; }
   font: 400 clamp(52px, 6vw, 92px)/.96 var(--serif);
   letter-spacing: -.045em;
 }
+.contact-note {
+  max-width: 470px;
+  margin: 34px 0 0;
+  color: rgba(33,26,23,.72);
+  font: 16px/1.6 var(--serif);
+}
 .contact-list { border-top: 1px solid var(--line); }
 .contact-list > * {
   display: grid;
