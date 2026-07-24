@@ -65,6 +65,7 @@ export default function Home() {
           <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
           <a href="#approach" onClick={() => setMenuOpen(false)}>Approach</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
         <button className="inquiry-link" onClick={openInquiry}>Start an inquiry</button>
         <button
@@ -209,6 +210,7 @@ export default function Home() {
         <p>Luxury event design &amp; décor</p>
         <div>
           <a href="#services">Services</a>
+          <a href="#approach">Approach</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </div>
