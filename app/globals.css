@@ -117,10 +117,10 @@ a { text-decoration: none; }
 .hero-art {
   position: absolute;
   z-index: 1;
-  width: min(43vw, 690px);
-  height: 84vh;
-  top: 12vh;
-  right: -14vw;
+  width: min(40vw, 640px);
+  height: 72vh;
+  top: 14vh;
+  right: -4.5vw;
 }
 .hero-art::before {
   content: "";
