@@ -98,7 +98,7 @@ a { text-decoration: none; }
 .hero-title {
   position: absolute;
   z-index: 3;
-  top: 30vh;
+  top: 34vh;
   left: 3.5vw;
   margin: 0;
   font-family: var(--serif);
@@ -120,7 +120,7 @@ a { text-decoration: none; }
   width: min(43vw, 690px);
   height: 84vh;
   top: 12vh;
-  right: -7vw;
+  right: -14vw;
 }
 .hero-art::before {
   content: "";
@@ -162,8 +162,11 @@ a { text-decoration: none; }
   line-height: 1.45;
 }
 .hero-footer {
+  position: absolute;
   z-index: 4;
-  grid-column: 1 / -1;
+  left: 3.5vw;
+  right: 3.5vw;
+  bottom: 34px;
   display: flex;
   justify-content: space-between;
   padding-top: 18px;
