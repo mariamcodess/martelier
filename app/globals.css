@@ -3,7 +3,6 @@
 :root {
   --bone: #f2ede4;
   --paper: #f7f3ec;
-  --warm-neutral: #eae1d7;
   --oxblood: #581c25;
   --espresso: #211a17;
   --brass: #a68157;
@@ -187,7 +186,7 @@ em { color: var(--oxblood); font-weight: 400; }
 .section-heading { display: flex; justify-content: space-between; margin-bottom: 50px; }
 .section-note { color: rgba(33,26,23,.55); }
 .services {
-  background: var(--warm-neutral);
+  background: var(--paper);
   border-top: 1px solid rgba(88,28,37,.16);
 }
 .service-list { border-top: 1px solid var(--line); }
