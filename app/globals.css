@@ -117,24 +117,16 @@ a { text-decoration: none; }
 .hero-art {
   position: absolute;
   z-index: 1;
-  width: min(40vw, 640px);
-  height: 72vh;
+  width: min(36vw, 560px);
+  height: 68vh;
   top: 14vh;
-  right: -4.5vw;
-}
-.hero-art::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: -13px 13px 17px -13px;
-  border: 1px solid rgba(88, 28, 37, .45);
-  border-radius: 50% 50% 0 0;
+  right: 3.5vw;
 }
 .hero-image {
   width: 100%;
   height: calc(100% - 30px);
-  background: linear-gradient(rgba(242,237,228,.02), rgba(166,129,87,.03)), url("/martelier-backdrop.png") center/cover;
-  border-radius: 50% 50% 0 0;
+  background: linear-gradient(rgba(242,237,228,.02), rgba(166,129,87,.03)), url("/martelier-backdrop.png") 52% center/cover;
+  border-radius: 48% 48% 3px 3px;
   filter: saturate(.9) contrast(.98);
   box-shadow: 0 24px 70px rgba(33,26,23,.1);
   transition: transform 1.1s cubic-bezier(.2,.7,.2,1), filter .7s ease;
@@ -172,12 +164,14 @@ a { text-decoration: none; }
   padding-top: 18px;
   border-top: 1px solid var(--line);
 }
+.hero-footer { font-size: 10px; }
 .reveal { animation: reveal .9s both cubic-bezier(.2,.75,.3,1); }
 .hero-title .reveal:nth-child(2) { animation-delay: .13s; }
 .hero-copy.reveal { animation-delay: .25s; }
 @keyframes reveal { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
 
 .section-pad { padding: 130px 6vw; }
+.section-label, .section-note { font-size: 11px; }
 .section-label { color: var(--oxblood); }
 .intro { border-top: 1px solid var(--line); background: var(--paper); }
 .intro-grid {
@@ -207,7 +201,6 @@ em { color: var(--oxblood); font-weight: 400; }
 }
 .text-link span { margin-left: 28px; }
 .section-heading { display: flex; justify-content: space-between; margin-bottom: 50px; }
-.services .section-heading p { font-size: 11px; }
 .section-note { color: rgba(33,26,23,.55); }
 .service-list { border-top: 1px solid var(--line); }
 .service-row {
@@ -227,7 +220,7 @@ em { color: var(--oxblood); font-weight: 400; }
 
 .image-story {
   position: relative;
-  min-height: 980px;
+  min-height: 860px;
   padding: 110px 6vw;
   overflow: hidden;
   background: var(--oxblood);
@@ -248,7 +241,7 @@ em { color: var(--oxblood); font-weight: 400; }
   padding: 55px 60px 30px 0;
   background: var(--oxblood);
 }
-.story-copy .section-label { color: var(--rose); }
+.story-copy .section-label { color: var(--rose); font-size: 12px; }
 .story-copy h2 {
   margin: 28px 0;
   font: 400 clamp(48px, 5.8vw, 90px)/.96 var(--serif);
@@ -260,17 +253,6 @@ em { color: var(--oxblood); font-weight: 400; }
   margin: 0;
   font: 17px/1.6 var(--serif);
   color: rgba(242,237,228,.82);
-}
-.tablescape-image {
-  position: absolute;
-  right: 7vw;
-  bottom: 55px;
-  z-index: 3;
-  width: 260px;
-  height: 350px;
-  border: 10px solid var(--bone);
-  background: url("/martelier-tablescape.png") center/cover;
-  box-shadow: 0 25px 65px rgba(20,10,10,.28);
 }
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
 .step { padding: 25px 28px 15px 0; border-right: 1px solid var(--line); min-height: 260px; }
@@ -415,7 +397,7 @@ footer button { border: 0; background: none; padding: 0; }
   .hero-kicker { margin: 0; }
   .hero-title { top: 205px; left: 22px; margin: 0; font-size: clamp(55px, 13vw, 78px); line-height: .85; width: 88vw; }
   .hero-title-italic { margin-left: 6vw; }
-  .hero-art { width: 58vw; height: 470px; top: 300px; right: -11vw; }
+  .hero-art { width: 55vw; height: 470px; top: 300px; right: -4vw; }
   .hero-copy { position: absolute; z-index: 4; width: 48vw; bottom: 100px; left: 22px; margin: 0; font-size: 15px; }
   .hero-footer { position: absolute; bottom: 25px; left: 22px; right: 22px; }
   .hero-footer span:last-child { display: none; }
@@ -426,11 +408,10 @@ footer button { border: 0; background: none; padding: 0; }
   .section-note { margin-top: 12px; }
   .service-row { grid-template-columns: 35px 1fr 20px; gap: 15px; }
   .service-row p { grid-column: 2 / -1; }
-  .image-story { min-height: 940px; padding: 70px 22px; }
+  .image-story { min-height: 790px; padding: 70px 22px; }
   .backdrop-image { width: 92%; height: 470px; }
   .story-copy { width: 90%; margin-top: -55px; padding: 35px 30px 25px 0; }
   .story-copy h2 { font-size: clamp(45px, 11vw, 70px); }
-  .tablescape-image { right: 22px; bottom: 45px; width: 210px; height: 285px; }
   .steps { grid-template-columns: 1fr 1fr; }
   .step:nth-child(2) { border-right: 0; }
   .step:nth-child(n+3) { border-top: 1px solid var(--line); }
@@ -442,13 +423,12 @@ footer button { border: 0; background: none; padding: 0; }
 @media (max-width: 520px) {
   .hero { min-height: 760px; }
   .hero-title { top: 195px; font-size: 53px; }
-  .hero-art { top: 290px; right: -15vw; width: 66vw; height: 400px; }
+  .hero-art { top: 290px; right: -8vw; width: 62vw; height: 400px; }
   .hero-copy { width: 53vw; bottom: 82px; }
   .service-row h3 { font-size: 31px; }
-  .image-story { min-height: 850px; }
+  .image-story { min-height: 720px; }
   .backdrop-image { width: 100%; height: 330px; }
   .story-copy { width: 100%; margin-top: -20px; }
-  .tablescape-image { width: 155px; height: 215px; }
   .steps { grid-template-columns: 1fr; }
   .step, .step + .step { border-right: 0; border-top: 1px solid var(--line); padding-left: 0; min-height: 220px; }
   .step h3 { margin-top: 45px; }

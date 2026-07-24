@@ -94,7 +94,7 @@ export default function Home() {
         </p>
         <div className="hero-footer">
           <span>Dallas · DMV · Beyond</span>
-          <span>Event décor&nbsp;&nbsp;•&nbsp;&nbsp;Backdrops&nbsp;&nbsp;•&nbsp;&nbsp;Tablescapes</span>
+          <span>Event décor&nbsp;&nbsp;•&nbsp;&nbsp;Backdrops&nbsp;&nbsp;•&nbsp;&nbsp;Tablescapes&nbsp;&nbsp;•&nbsp;&nbsp;Custom signage</span>
         </div>
       </section>
 
@@ -140,7 +140,6 @@ export default function Home() {
             your style and make the people you love feel part of something special.
           </p>
         </div>
-        <div className="tablescape-image" role="img" aria-label="Luxury oxblood and ivory wedding tablescape" />
       </section>
 
       <section className="approach section-pad" id="approach">
