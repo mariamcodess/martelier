@@ -24,6 +24,17 @@ button, input, select, textarea { font: inherit; }
 button, a { color: inherit; }
 button { cursor: pointer; }
 a { text-decoration: none; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 .site-header {
   position: absolute;
@@ -364,6 +375,109 @@ footer > * { justify-self: center; }
 footer div { display: flex; justify-content: center; gap: 25px; }
 footer button { border: 0; background: none; padding: 0; }
 
+.mailing-overlay {
+  position: fixed;
+  z-index: 60;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(33,26,23,0);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s ease, background .4s ease;
+}
+.mailing-overlay.is-open {
+  background: rgba(33,26,23,.7);
+  opacity: 1;
+  pointer-events: auto;
+}
+.mailing-popup {
+  position: relative;
+  display: grid;
+  grid-template-columns: .82fr 1.18fr;
+  width: min(860px, 100%);
+  min-height: 500px;
+  overflow: hidden;
+  background: var(--paper);
+  box-shadow: 0 30px 100px rgba(20,10,10,.3);
+  transform: translateY(18px) scale(.985);
+  transition: transform .5s cubic-bezier(.2,.75,.3,1);
+}
+.mailing-overlay.is-open .mailing-popup { transform: none; }
+.mailing-image {
+  min-height: 500px;
+  background:
+    linear-gradient(rgba(88,28,37,.05), rgba(33,26,23,.12)),
+    url("/martelier-tablescape.jpg") center/cover;
+}
+.mailing-content {
+  align-self: center;
+  padding: 65px 62px;
+}
+.mailing-content .section-label { margin: 0 0 24px; }
+.mailing-content h2 {
+  margin: 0;
+  font: 400 clamp(40px, 4vw, 58px)/.98 var(--serif);
+  letter-spacing: -.04em;
+}
+.mailing-content > p,
+.mailing-success > p:not(.section-label) {
+  margin: 25px 0;
+  color: rgba(33,26,23,.72);
+  font: 16px/1.6 var(--serif);
+}
+.mailing-content form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  margin-top: 30px;
+  border-bottom: 1px solid var(--espresso);
+}
+.mailing-content input {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 0;
+  border: 0;
+  background: transparent;
+  color: var(--espresso);
+  font: 16px/1.4 var(--serif);
+  outline: none;
+}
+.mailing-content form button,
+.mailing-text-button {
+  border: 0;
+  background: transparent;
+  color: var(--oxblood);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+}
+.mailing-content form button { padding: 0 0 0 18px; white-space: nowrap; }
+.mailing-content small {
+  display: block;
+  margin-top: 14px;
+  color: rgba(33,26,23,.52);
+  font: 10px/1.5 var(--sans);
+}
+.mailing-close {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  right: 22px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  font: 30px/1 var(--serif);
+}
+.mailing-success { display: grid; align-content: center; min-height: 300px; }
+.mailing-text-button {
+  justify-self: start;
+  min-height: 44px;
+  padding: 0;
+  border-bottom: 1px solid var(--oxblood);
+}
+
 .inquiry-overlay {
   position: fixed;
   z-index: 50;
@@ -498,6 +612,8 @@ footer button { border: 0; background: none; padding: 0; }
   .about-mark { width: min(82vw, 430px); }
   footer { grid-template-columns: 1fr 1fr; }
   .inquiry-panel { padding: 65px 24px; }
+  .mailing-popup { grid-template-columns: .7fr 1.3fr; }
+  .mailing-content { padding: 55px 38px; }
 }
 
 @media (max-width: 520px) {
@@ -537,6 +653,31 @@ footer button { border: 0; background: none; padding: 0; }
   .close-button { top: 16px; right: 17px; }
   footer { grid-template-columns: 1fr; align-items: start; }
   footer a { min-height: 44px; display: inline-flex; align-items: center; }
+  .mailing-overlay { padding: 14px; }
+  .mailing-popup {
+    grid-template-columns: 1fr;
+    max-height: calc(100vh - 28px);
+    overflow-y: auto;
+  }
+  .mailing-image { min-height: 180px; height: 180px; background-position: center 58%; }
+  .mailing-content { padding: 36px 24px 32px; }
+  .mailing-content .section-label { margin-bottom: 17px; }
+  .mailing-content h2 { font-size: 39px; }
+  .mailing-content > p, .mailing-success > p:not(.section-label) { margin: 18px 0; font-size: 15px; }
+  .mailing-content form { grid-template-columns: 1fr; border: 0; gap: 10px; margin-top: 22px; }
+  .mailing-content input { border-bottom: 1px solid var(--espresso); }
+  .mailing-content form button {
+    min-height: 48px;
+    padding: 0 18px;
+    background: var(--oxblood);
+    color: var(--bone);
+  }
+  .mailing-close {
+    top: 8px;
+    right: 8px;
+    border-radius: 50%;
+    background: rgba(247,243,236,.88);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

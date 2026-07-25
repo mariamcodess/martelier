@@ -36,18 +36,39 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [inquiryOpen, setInquiryOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [mailingOpen, setMailingOpen] = useState(false);
+  const [mailingJoined, setMailingJoined] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = inquiryOpen ? "hidden" : "";
+    document.body.style.overflow = inquiryOpen || mailingOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
-  }, [inquiryOpen]);
+  }, [inquiryOpen, mailingOpen]);
+
+  useEffect(() => {
+    if (window.sessionStorage.getItem("martelier-mailing-seen")) return;
+
+    const timer = window.setTimeout(() => setMailingOpen(true), 7000);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   function openInquiry() {
     setMenuOpen(false);
+    setMailingOpen(false);
     setSubmitted(false);
     setInquiryOpen(true);
+  }
+
+  function closeMailing() {
+    window.sessionStorage.setItem("martelier-mailing-seen", "true");
+    setMailingOpen(false);
+  }
+
+  function handleMailingSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    window.sessionStorage.setItem("martelier-mailing-seen", "true");
+    setMailingJoined(true);
   }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -216,6 +237,50 @@ export default function Home() {
         </div>
         <span>© 2026 Martelier</span>
       </footer>
+
+      <div
+        className={mailingOpen ? "mailing-overlay is-open" : "mailing-overlay"}
+        aria-hidden={!mailingOpen}
+        onMouseDown={(event) => {
+          if (event.target === event.currentTarget) closeMailing();
+        }}
+      >
+        <section className="mailing-popup" role="dialog" aria-modal="true" aria-labelledby="mailing-title">
+          <button className="mailing-close" onClick={closeMailing} aria-label="Close mailing list offer">×</button>
+          <div className="mailing-image" role="img" aria-label="Romantic ivory and oxblood wedding tablescape" />
+          <div className="mailing-content">
+            {mailingJoined ? (
+              <div className="mailing-success">
+                <p className="section-label">Welcome to the list</p>
+                <h2 id="mailing-title">A beautiful beginning.</h2>
+                <p>
+                  Your 10% welcome offer is reserved. We’ll be in touch with
+                  inspiration, thoughtful details, and a little more beauty
+                  for your inbox.
+                </p>
+                <button className="mailing-text-button" onClick={closeMailing}>Continue exploring</button>
+              </div>
+            ) : (
+              <>
+                <p className="section-label">A little something for you</p>
+                <h2 id="mailing-title">Let’s make your first celebration <em>even sweeter.</em></h2>
+                <p>
+                  Join the Martelier list for thoughtful event inspiration and
+                  receive 10% off your first décor service.
+                </p>
+                <form onSubmit={handleMailingSubmit}>
+                  <label>
+                    <span className="sr-only">Email address</span>
+                    <input type="email" name="mailingEmail" placeholder="Your email address" autoComplete="email" required />
+                  </label>
+                  <button type="submit">Join the list <span>↗</span></button>
+                </form>
+                <small>One welcome offer per client. Additional terms may apply.</small>
+              </>
+            )}
+          </div>
+        </section>
+      </div>
 
       <div
         className={inquiryOpen ? "inquiry-overlay is-open" : "inquiry-overlay"}
