@@ -254,9 +254,9 @@ export default function Home() {
                 <p className="section-label">Welcome to the list</p>
                 <h2 id="mailing-title">A beautiful beginning.</h2>
                 <p>
-                  Your 10% welcome offer is reserved. We’ll be in touch with
-                  inspiration, thoughtful details, and a little more beauty
-                  for your inbox.
+                  Your 10% welcome offer is reserved. You’ll be the first to
+                  hear about special offers, exclusive savings, and new ways
+                  to make your celebration feel extraordinary.
                 </p>
                 <button className="mailing-text-button" onClick={closeMailing}>Continue exploring</button>
               </div>
@@ -265,8 +265,8 @@ export default function Home() {
                 <p className="section-label">A little something for you</p>
                 <h2 id="mailing-title">Let’s make your first celebration <em>even sweeter.</em></h2>
                 <p>
-                  Join the Martelier list for thoughtful event inspiration and
-                  receive 10% off your first décor service.
+                  Join the Martelier mailing list for exclusive deals, special
+                  offers, and 10% off your first décor service.
                 </p>
                 <form onSubmit={handleMailingSubmit}>
                   <label>
