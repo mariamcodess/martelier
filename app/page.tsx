@@ -190,20 +190,18 @@ export default function Home() {
           </p>
         </div>
         <div className="contact-list">
-          <a href="mailto:martelier.co@gmail.com">
+          <div>
             <span>Email</span>
-            <strong>martelier.co@gmail.com</strong>
-            <b>↗</b>
-          </a>
+            <strong>Coming soon</strong>
+          </div>
           <div>
             <span>Phone</span>
-            <strong>Work number coming soon</strong>
+            <strong>Coming soon</strong>
           </div>
-          <a href="https://www.instagram.com/martelier/" target="_blank" rel="noreferrer">
+          <div>
             <span>Instagram</span>
-            <strong>@martelier</strong>
-            <b>↗</b>
-          </a>
+            <strong>Coming soon</strong>
+          </div>
         </div>
       </section>
 
