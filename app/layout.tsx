@@ -1,19 +1,24 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : "https://martelier-events.abiolar.chatgpt.site";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Martelier — Luxury Event Design & Décor",
   description:
-    "Artfully composed environments for weddings, milestone celebrations, and intimate gatherings.",
+    "Thoughtfully designed luxury event décor for weddings, milestone celebrations, and elevated gatherings.",
   openGraph: {
     title: "Martelier — Luxury Event Design & Décor",
-    description: "Where occasions become atmosphere.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Martelier — Where occasions become atmosphere." }],
+    description: "Your vision, beautifully brought to life.",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Martelier — Your vision, beautifully brought to life." }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Martelier — Luxury Event Design & Décor",
-    description: "Where occasions become atmosphere.",
+    description: "Your vision, beautifully brought to life.",
     images: ["/og.png"],
   },
   icons: {

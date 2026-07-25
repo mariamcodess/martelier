@@ -66,6 +66,7 @@ export default function Home() {
           <a href="#approach" onClick={() => setMenuOpen(false)}>Approach</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <button className="mobile-nav-inquiry" onClick={openInquiry}>Start an inquiry</button>
         </nav>
         <button className="inquiry-link" onClick={openInquiry}>Start an inquiry</button>
         <button
@@ -173,7 +174,7 @@ export default function Home() {
       </section>
 
       <section className="closing section-pad">
-        <p className="section-label">Weddings · Milestones · Intimate celebrations</p>
+        <p className="section-label">Weddings · Milestones · Elevated celebrations</p>
         <h2>Let’s make your day<br /><em>feel extraordinary.</em></h2>
         <button className="primary-button" onClick={openInquiry}>Start an inquiry <span>↗</span></button>
       </section>
